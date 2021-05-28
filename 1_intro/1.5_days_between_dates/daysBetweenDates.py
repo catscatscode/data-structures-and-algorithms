@@ -40,7 +40,7 @@ def dateIsBefore (year1, month1, day1, year2, month2, day2):
         return True
     return False
 
-def isLeapYear(year, month, day):
+def isLeapYear(year):
     if year % 400 == 0:
         return True
     elif year % 100 == 0:
@@ -54,9 +54,9 @@ def daysInMonth(year, month, day):
         return 31
     elif month in (4,6,9,11):
         return 30
-    elif month == 2 and isLeapYear(year, month, day):
+    elif month == 2 and isLeapYear(year):
         return 29
-    elif month == 2 and isLeapYear(year, month, day) == False:
+    elif month == 2 and isLeapYear(year) == False:
         return 28
 
 def nextDate(year, month, day):
