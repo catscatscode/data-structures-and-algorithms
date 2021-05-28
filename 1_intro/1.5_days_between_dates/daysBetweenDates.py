@@ -41,7 +41,11 @@ def dateIsBefore (year1, month1, day1, year2, month2, day2):
     return False
 
 def isLeapYear(year, month, day):
-    if (year % 4 == 0) or (year % 400) == 0:
+    if year % 400 == 0:
+        return True
+    elif year % 100 == 0:
+        return False
+    elif year % 4 == 0:
         return True
     return False
 
